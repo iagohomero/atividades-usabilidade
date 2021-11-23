@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <form>
+
+        <section id="descricao_do_pokemom">
+            <header>
+                <h2>CLUBE POKÉMOM</h2>
+            </header>
+
+            <div class="input-grup">
+                <label id="rotulo-numero-nacional" for="campo-numero-nacional">Numero nacional:</label>
+                <input id="rotulo-numero-nacional" type="number" min="0">
+            </div>
+
+            <div class="input-grup">
+                <label id="rotulo-nome" for="campo-nome">Nome:</label>
+                <input id="rotulo-nome" name="nome" type="text">
+            </div>
+
+            <label for="campo-tipo">Tipo:</label>
+            <select id="tipo1">
+                <option selected disabled value="">selecione</option>
+                <option value=""></option>
+                <option>Aço</option>
+                <option>Água</option>
+                <option>Dragão</option>
+                <option>Elétrico</option>
+                <option>Fada</option>
+                <option>Fantasma</option>
+                <option>Fogo</option>
+                <option>Gelo</option>
+                <option>Lutador</option>
+                <option>Normal</option>
+                <option>Pedra</option>
+                <option>Planta</option>
+                <option>Psíquico</option>
+                <option>Sombrio</option>
+                <option>Terra</option>
+                <option>Venenoso</option>
+                <option>Voador</option>
+
+            </select>
+
+
+
+            <label id="label2" for="campo-tipo"></label>
+            <select id="tipo2">
+                <option selected disabled value="">selecione</option>
+                <option value=""></option>
+                <option>Aço</option>
+                <option>Água</option>
+                <option>Dragão</option>
+                <option>Elétrico</option>
+                <option>Fada</option>
+                <option>Fantasma</option>
+                <option>Fogo</option>
+                <option>Gelo</option>
+                <option>Lutador</option>
+                <option>Normal</option>
+                <option>Pedra</option>
+                <option>Planta</option>
+                <option>Psíquico</option>
+                <option>Sombrio</option>
+                <option>Terra</option>
+                <option>Venenoso</option>
+                <option>Voador</option>
+
+            </select>
+
+
+            <section id="pontos">
+
+                <div class="grup1">
+                    HP:
+                    <input id="hp" type="number" min="1" max="255">
+                </div>
+
+                <div class="grup2">
+                    Ataque:
+                    <input id="ataque" type="number" min="0">
+                </div>
+
+                <div class="grup3">
+                    Defesa:
+                    <input id="defesa" type="number" min="0">
+                </div>
+
+                <div class="grup4">
+                    Ataque especial:
+                    <input id="especiala" type="number" min="0">
+                </div>
+
+                <div class="grup5">
+                    Defesa especial:
+                    <input id="especiald" type="number" min="0">
+                </div>
+
+                <div class="grup6">
+                    Veocidade:
+                    <input id="velocidade" type="number" min="0">
+                </div>
+                <button onclick="somar()">somar</button> Soma de todas as estatísticas básicas (Pontos de Vida, Ataque,
+                Defesa, Ataque Especial, Defesa Especial e Velocidade) <br>
+                <div>
+                    Total: <span></span>
+                </div>
+
+
+                <script>
+
+                    var n1 = document.querySelector('#hp')
+                    var n2 = document.querySelector('#ataque')
+                    var n3 = document.querySelector('#defesa')
+                    var n4 = document.querySelector('#especiala')
+                    var n5 = document.querySelector('#especialb')
+                    var n6 = document.querySelector('#velocidade')
+
+
+                    var resultado = document.querySelector('span')
+
+                    function somar() {
+                        resultado.innerHTML = parseInt(hp.value) + parseInt(ataque.value) + parseInt(defesa.value) + parseInt(especiala.value) + parseInt(especiald.value) + parseInt(velocidade.value)
+                    }
+                </script>
+
+            </section>
+
+            <section>
+                <div class="input-grup">
+                    <label id="rotulo-geracao" for="campo-geracao">Geração:</label>
+                    <input id="rotulo-geracao" type="number" min="1" max="7">
+                </div>
+
+                <div class="input-grup">
+                    <label id="rotulo-lendario" for="campo-lendario">Lendario:</label>
+                    <input id="rotulo-lendario" type="checkbox"> SIM
+                    <input id="rotulo-lendario" type="checkbox"> NÂO
+                </div>
+
+
+                <label id="label2" for="campo-cor">Cor</label>
+                <select id="tipo2">
+                    <option selected disabled value="">selecione</option>
+                    <option value=""></option>
+                    <option>Amarelo</option>
+                    <option>Azul</option>
+                    <option>Branco</option>
+                    <option>Cinza</option>
+                    <option>Marrom</option>
+                    <option>Preto</option>
+                    <option>Rosa</option>
+                    <option>Roxo</option>
+                    <option> Verde</option>
+                    <option>Vermelho</option>
+                </select>
+
+                <div class="input-grup">
+                    <label id="rotulo-altua" for="campo-altura">Altura:</label>
+                    <input id="rotulo-altua" type="text" >
+                </div>
+
+                <div class="input-grup">
+                    <label id="rotulo-peso" for="campo-peso">Peso:</label>
+                    <input id="rotulo-peso" type="number" min="1" >
+                </div>
+
+                <div class="input-grup">
+                    <label id="rotulo-taxa-de-captura" for="campo-taxa-de-captura">Taxa de captura:</label>
+                    <input id="rotulo-taxa-de-captura" type="number" min="0" max="255" >
+                </div>
+
+            </section>
+            <button>Enviar</button>
+
+
+
+        </section>
+
+    </form>
+
+</body>
+
+</html>
